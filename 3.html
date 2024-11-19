@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pigier-Bénin</title>
+    <!-- Lien vers le CSS de Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Animation pour l'entête */
+        .fade-in {
+            animation: fadeIn 2s ease-out forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Animation pour les éléments de la liste */
+        .slide-up {
+            animation: slideUp 1.5s ease-out forwards;
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(30px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        /* Dégradé violet, bleu et noir pour le fond */
+        body {
+            background: linear-gradient(135deg, #6a1b9a, #1e88e5, #000000);
+            color: white;
+        }
+
+        header img {
+            transition: transform 0.3s ease;
+        }
+
+        header img:hover {
+            transform: scale(1.1);
+        }
+
+        .list-group-item {
+            transition: background-color 0.3s ease;
+        }
+
+        .list-group-item:hover {
+            background-color: #4caf50;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="container d-flex justify-content-between align-items-center py-3 fade-in">
+        <!-- Logo de gauche -->
+        <img src="file:///storage/emulated/0/Download/pigier.jpeg" alt="Logo Gauche" class="img-fluid" style="width: 100px;">
+        
+        <!-- Texte de bienvenue -->
+        <h1 class="text-center flex-grow-1 text-primary fw-bold">Pigier-Bénin</h1>
+        
+        <!-- Logo de droite -->
+        <img src="file:///storage/emulated/0/Download/pigier.jpeg" alt="Logo Droit" class="img-fluid" style="width: 100px;">
+    </header>
+
+    <!-- Section : Liste des Filières -->
+    <section class="container my-5">
+        <h2 class="text-light slide-up">Liste des Filières</h2>
+        <ul class="list-group mt-3">
+            <li class="list-group-item slide-up"><strong>RGL</strong> (Réseaux et Génie Logiciel)</li>
+            <li class="list-group-item slide-up"><strong>RMS</strong> (Réseau Mobile et Sécurité)</li>
+            <li class="list-group-item slide-up"><strong>BF</strong> (Banque et Finance)</li>
+            <li class="list-group-item slide-up"><strong>CG</strong> (Comptabilité Générale)</li>
+            <li class="list-group-item slide-up"><strong>GTL</strong> (Gestion des Transports et Logistiques)</li>
+        </ul>
+    </section>
+
+    <!-- Lien vers le JS de Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

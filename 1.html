@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Université Pigier Bénin</title>
+    <!-- Lien vers le CSS de Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Lien vers la feuille de style pour les animations -->
+    <style>
+        body {
+            background: linear-gradient(to bottom, #2d3a2f, #0a0c0b, #1a2422);
+            color: white;
+        }
+
+        .fadeIn {
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .section-title {
+            animation: slideUp 2s ease-in-out;
+        }
+
+        @keyframes slideUp {
+            0% {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .lead {
+            animation: slideUp 3s ease-in-out;
+        }
+
+        .btn-custom {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .btn-custom:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Section Titre avec animation -->
+    <section class="container text-center mt-5 fadeIn">
+        <h1 class="display-4 fw-bold text-light section-title">Université Pigier Bénin</h1>
+        <p class="lead mt-4">
+            Fondée en 1850, Pigier est un réseau d'écoles techniques privées en France, qui propose des formations
+            dans des domaines variés tels que le commerce, la communication, et la gestion. Avec 30 écoles réparties
+            sur tout le territoire français, l'université met l'accent sur la formation pratique et l'employabilité
+            des étudiants, leur permettant d'acquérir les compétences nécessaires pour réussir dans le monde professionnel.
+        </p>
+        <a href="#about" class="btn btn-custom mt-4">En savoir plus</a>
+    </section>
+
+    <!-- Lien vers le JS de Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

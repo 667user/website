@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil et Compétences de Rayanne TAMOU KORA</title>
+    <!-- Intégration de Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-X1a2Czjx7cDyy6ZB2BbfTjqaEmYPtbj5J5OaA5MlVo6U5Jp18g5l5hbBbbFL4eB6" crossorigin="anonymous">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #0047ab 20%, #001f43 50%, #00aaff 80%);
+            color: #f8f9fa;
+            padding-top: 50px;
+            overflow-x: hidden;
+            background-size: cover;
+            animation: backgroundAnimation 10s infinite alternate;
+        }
+
+        @keyframes backgroundAnimation {
+            0% {
+                background-position: 0% 0%;
+            }
+            100% {
+                background-position: 100% 100%;
+            }
+        }
+
+        h1 {
+            text-align: center;
+            color: #00aaff;
+            font-size: 3rem;
+            letter-spacing: 2px;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        .section {
+            margin-bottom: 40px;
+            animation: slideIn 1s ease-in-out;
+        }
+
+        @keyframes slideIn {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        .photo img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 4px solid #00aaff;
+            box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.5);
+            transition: transform 0.4s ease;
+        }
+
+        .photo img:hover {
+            transform: scale(1.1);
+        }
+
+        .section h2 {
+            font-size: 2rem;
+            color: #00aaff;
+            margin-bottom: 20px;
+        }
+
+        .list-unstyled li {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .btn-custom {
+            background-color: #00aaff;
+            color: white;
+            font-weight: bold;
+            padding: 12px 30px;
+            border-radius: 30px;
+            box-shadow: 0px 10px 15px rgba(0, 170, 255, 0.3);
+            transition: transform 0.2s ease, background-color 0.3s ease;
+        }
+
+        .btn-custom:hover {
+            background-color: #0077aa;
+            transform: translateY(-5px);
+        }
+
+        .move {
+            position: relative;
+            transition: transform 0.2s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <div class="container text-center">
+        <!-- Main Title -->
+        <h1 class="move">Profil de Rayanne TAMOU KORA</h1>
+
+        <!-- Photo -->
+        <div class="photo mb-4 move">
+            <img src="rayanne.jpg" alt="Photo de Rayanne" class="img-fluid">
+        </div>
+
+        <!-- Informations Personnelles -->
+        <div class="section move">
+            <h2>Informations Personnelles</h2>
+            <ul class="list-unstyled">
+                <li><strong>Nom :</strong> TAMOU KORA</li>
+                <li><strong>Prénoms :</strong> Rayanne</li>
+                <li><strong>Date de naissance :</strong> 22/08/2005</li>
+                <li><strong>Nationalité :</strong> Béninoise</li>
+                <li><strong>Adresse :</strong> Akpakpa</li>
+                <li><strong>Email :</strong> <a href="mailto:rayanne@gmail.com" class="text-primary">rayanne@gmail.com</a></li>
+                <li><strong>Téléphone :</strong> 41314949</li>
+            </ul>
+        </div>
+
+        <!-- Compétences -->
+        <div class="section move">
+            <h2>Compétences</h2>
+            <ul class="list-unstyled">
+                <li>Langages de programmation : C, PHP, HTML</li>
+                <li>Logiciels : Word, Excel, PowerPoint</li>
+                <li>Réseau et Sécurité Informatique</li>
+            </ul>
+        </div>
+
+        <!-- Langues -->
+        <div class="section move">
+            <h2>Langues</h2>
+            <ul class="list-unstyled">
+                <li>Français</li>
+                <li>Anglais</li>
+                <li>Goun</li>
+                <li>Fon</li>
+            </ul>
+        </div>
+
+        <!-- Contact Button -->
+        <a href="mailto:rayanne@gmail.com" class="btn btn-custom move">Contacter Rayanne</a>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz4fnFO9gyb3Tf3VaaW0v5U5oG0ANwiW6v2l5RiGho0dp1aKjUjDPk3h8H" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-pzjw8f+ua7Kw1TIq0d5R5KjISzZhzIuV5aMFpPqGA5Km5X3pK9d4lnA4GhRFEVjq" crossorigin="anonymous"></script>
+    <script>
+        document.addEventListener("mousemove", function(e) {
+            const elements = document.querySelectorAll('.move');
+            elements.forEach(el => {
+                const speed = el.getAttribute('data-speed') || 15;
+                const x = (window.innerWidth - e.pageX * speed) / 90;
+                const y = (window.innerHeight - e.pageY * speed) / 90;
+                el.style.transform = `translate(${x}px, ${y}px)`;
+            });
+        });
+    </script>
+</body>
+</html>

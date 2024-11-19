@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liste des étudiants</title>
+    <!-- Lien vers le CSS de Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(to right, #f0f0f0, #d0d0d0, #1c1c1c); /* Dégradé de couleur entre cendre, bronze et noir */
+            color: #fff;
+        }
+
+        .contact {
+            color: #17a2b8;
+            font-weight: bold;
+        }
+
+        .admis {
+            color: #28a745;
+            font-weight: bold;
+        }
+
+        .refuse {
+            color: #dc3545;
+            font-weight: bold;
+        }
+
+        /* Animation d'apparition */
+        .fade-in {
+            animation: fadeIn 1s ease-out;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        /* Style des cartes de titre */
+        .title-card {
+            background-color: #2f4f4f;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Animation de la table */
+        .table-hover tbody tr:hover {
+            background-color: rgba(0, 0, 0, 0.1);
+            transform: scale(1.02);
+            transition: 0.3s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Titre principal -->
+    <div class="container my-5 fade-in">
+        <div class="title-card text-center">
+            <h2 class="display-4">Liste des étudiants</h2>
+        </div>
+    </div>
+
+    <!-- Tableau des étudiants -->
+    <div class="container fade-in">
+        <table class="table table-striped table-bordered text-center">
+            <thead class="table-light">
+                <tr>
+                    <th>Nom</th>
+                    <th>Prénom</th>
+                    <th>Contact</th>
+                    <th>Statut</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Yao</td>
+                    <td>Koffi</td>
+                    <td class="contact">+229 91 23 45 67</td>
+                    <td class="admis">Admis</td>
+                </tr>
+                <tr>
+                    <td>Sow</td>
+                    <td>Fatou</td>
+                    <td class="contact">+229 90 12 34 56</td>
+                    <td class="refuse">Refusé</td>
+                </tr>
+                <tr>
+                    <td>Ouattara</td>
+                    <td>Aïssata</td>
+                    <td class="contact">+229 98 76 54 32</td>
+                    <td class="admis">Admis</td>
+                </tr>
+                <tr>
+                    <td>Traoré</td>
+                    <td>Issa</td>
+                    <td class="contact">+229 97 65 43 21</td>
+                    <td class="refuse">Refusé</td>
+                </tr>
+                <tr>
+                    <td>Abdoulaye</td>
+                    <td>Mariam</td>
+                    <td class="contact">+229 94 32 10 09</td>
+                    <td class="admis">Admis</td>
+                </tr>
+                <tr>
+                    <td>Konaté</td>
+                    <td>Moussa</td>
+                    <td class="contact">+229 93 21 09 08</td>
+                    <td class="refuse">Refusé</td>
+                </tr>
+                <tr>
+                    <td>Tandia</td>
+                    <td>Alima</td>
+                    <td class="contact">+229 92 34 12 78</td>
+                    <td class="admis">Admis</td>
+                </tr>
+                <tr>
+                    <td>Gnanou</td>
+                    <td>Thierry</td>
+                    <td class="contact">+229 91 45 67 89</td>
+                    <td class="refuse">Refusé</td>
+                </tr>
+                <tr>
+                    <td>Diop</td>
+                    <td>Cheikh</td>
+                    <td class="contact">+229 90 98 76 45</td>
+                    <td class="admis">Admis</td>
+                </tr>
+                <tr>
+                    <td>Kone</td>
+                    <td>Fanta</td>
+                    <td class="contact">+229 98 67 45 32</td>
+                    <td class="refuse">Refusé</td>
+                </tr>
+                <tr>
+                    <td>Coulibaly</td>
+                    <td>Awa</td>
+                    <td class="contact">+229 97 89 12 34</td>
+                    <td class="admis">Admis</td>
+                </tr>
+                <tr>
+                    <td>Diallo</td>
+                    <td>Amadou</td>
+                    <td class="contact">+229 94 56 78 90</td>
+                    <td class="refuse">Refusé</td>
+                </tr>
+                <tr>
+                    <td>Keita</td>
+                    <td>Nana</td>
+                    <td class="contact">+229 93 76 45 12</td>
+                    <td class="admis">Admis</td>
+                </tr>
+                <tr>
+                    <td>Sissoko</td>
+                    <td>Mahamadou</td>
+                    <td class="contact">+229 92 34 65 78</td>
+                    <td class="refuse">Refusé</td>
+                </tr>
+                <tr>
+                    <td>Adom</td>
+                    <td>Kouadio</td>
+                    <td class="contact">+229 91 23 45 09</td>
+                    <td class="admis">Admis</td>
+                </tr>
+                <tr>
+                    <td>Djeneba</td>
+                    <td>Moulaye</td>
+                    <td class="contact">+229 90 12 45 78</td>
+                    <td class="refuse">Refusé</td>
+                </tr>
+                <tr>
+                    <td>N'Diaye</td>
+                    <td>Salimata</td>
+                    <td class="contact">+229 98 76 54 23</td>
+                    <td class="admis">Admis</td>
+                </tr>
+                <tr>
+                    <td>Fofana</td>
+                    <td>Ibrahim</td>
+                    <td class="contact">+229 97 65 43 11</td>
+                    <td class="refuse">Refusé</td>
+                </tr>
+                <tr>
+                    <td>Togola</td>
+                    <td>Djibril</td>
+                    <td class="contact">+229 94 32 10 12</td>
+                    <td class="admis">Admis</td>
+                </tr>
+                <tr>
+                    <td>Wattao</td>
+                    <td>Sekou</td>
+                    <td class="contact">+229 93 21 09 13</td>
+                    <td class="refuse">Refusé</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Lien vers le JS de Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
